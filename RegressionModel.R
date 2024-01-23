@@ -1,3 +1,9 @@
+## Author: Hemant Thapa
+## Programming Language: R
+## Date Pushed to GitHub: 23.01.2024
+## Email: hemantthapa1998@gmail.com
+
+
 # 1. Creating Synthetic Data
 set.seed(123)
 X <- 1:100
