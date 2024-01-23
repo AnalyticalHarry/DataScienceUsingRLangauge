@@ -98,11 +98,11 @@ grid()
 # 14. Cost Function over Iterations
 par(mfrow = c(1, 2))  # Create a 1x2 plot grid
 plot(1:length(model$costs), model$costs, type = "l", xlab = "Iteration", ylab = "Cost", 
-     main = "Cost Function Progress")
+     main = "Cost Function")
 grid()
 # Plot the Changes in Weights and Biases over Iterations
 plot(1:length(model$weights), model$weights, type = "l", xlab = "Iteration", ylab = "Weight", 
-     main = "Weight Progress")
+     main = "Weight")
 lines(1:length(model$biases), model$biases, col = "red")
 grid()
 
