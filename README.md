@@ -1,1 +1,1 @@
-# DataScienceUsingRLangauge
+# Data Science using R Language 
