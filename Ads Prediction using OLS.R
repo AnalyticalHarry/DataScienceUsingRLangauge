@@ -172,7 +172,7 @@ cat("Mean Absolute Error (MAE):", round(mae, 4), "\n")
 #26. Residual analysis
 #scatter plot of residuals against the fitted values
 plot(fitted(model), residuals(model), main = "Residual Scatter Plot",
-     xlab = "Fitted Values", ylab = "Residuals", pch = 19, col = "black")
+     xlab = "Fitted Values", ylab = "Residuals", pch = 19, col = "black", cex = 1)
 abline(h = 0, col = "red", lty = 2)
 grid()
 
