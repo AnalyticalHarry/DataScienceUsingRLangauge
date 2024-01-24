@@ -24,7 +24,7 @@ library(rpart)
 ######## Loading Data Set ###########
 #####################################
 
-# 1. Loading  laod dataset and checking dimension
+# 1. Loading  laod dataset and checking dimension of dataset
 dataset = read.csv('Credit.csv')
 
 #####################################
