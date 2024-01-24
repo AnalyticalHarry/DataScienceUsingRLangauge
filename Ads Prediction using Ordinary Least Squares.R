@@ -3,10 +3,6 @@
 ## Date Pushed to GitHub: 23.01.2024
 ## Email: hemantthapa1998@gmail.com
 
-
-#library install.packages('skimr')
-#library install.packages('Rcurl')
-
 #Loading all libraries
 library(skimr)
 library(RCurl)
