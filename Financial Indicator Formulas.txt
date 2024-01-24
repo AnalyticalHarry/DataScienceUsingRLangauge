@@ -1,0 +1,43 @@
+Financial Indicator Formulas
+
+1. Simple Moving Average (SMA)
+
+The SMA is the average stock price over a specific period. The formula is straightforward:
+
+SMA = (Sum of Closing Prices over N periods) / N
+
+2. Exponential Moving Average (EMA)
+
+EMA gives more weight to recent prices and reacts more quickly to price changes than the SMA. The formula for EMA is:
+
+EMA_today = (Value_today × (Smoothing / (1 + N))) + EMA_yesterday × (1 - (Smoothing / (1 + N)))
+
+Where N is the number of periods, and Smoothing is typically set to 2.
+
+3. Relative Strength Index (RSI)
+
+RSI is a momentum oscillator that measures the speed and change of price movements, oscillating between zero and 100. The formula is:
+
+RSI = 100 - (100 / (1 + RS))
+
+Where RS (Relative Strength) = Average Gain / Average Loss over N periods.
+
+4. Moving Average Convergence Divergence (MACD)
+
+MACD is a trend-following momentum indicator showing the relationship between two EMAs of a security’s price:
+
+MACD = EMA_fast - EMA_slow
+
+Typically, EMA_fast is 12 periods, and EMA_slow is 26 periods. A signal line, the EMA of MACD, is also plotted.
+
+5. Bollinger Bands
+
+Bollinger Bands consist of a middle band (SMA) and two outer bands that are standard deviations away from the SMA:
+
+Middle Band = SMA_N-period
+
+Upper Band = SMA_N-period + (Standard Deviation of Price × 2)
+
+Lower Band = SMA_N-period - (Standard Deviation of Price × 2)
+
+Where N is typically 20 periods.
