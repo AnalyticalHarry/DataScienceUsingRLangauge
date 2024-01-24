@@ -205,6 +205,26 @@ legend("topright", legend = c("Training Residuals", "Testing Residuals"),
        col = c("blue", "red"), lty = 1, lwd = 2)
 grid()
 
+# Cook's Distance for Training set
+cook_train_mlr <- cooks.distance(train_model)
+plot(cook_train_mlr, pch = 19, main = "Cook's Distance Plot (Train set)", xlab = "Observation", ylab = "Cook's Distance", col = "blue")
+abline(h = 4 / length(cook_train_mlr), col = "red")  
+grid()
+
+# Cook's Distance for Testing set
+cook_test_mlr <- cooks.distance(train_model, newdata = data.frame(test_X, test_y))
+plot(cook_test_mlr, pch = 19, main = "Cook's Distance Plot (Test set)", xlab = "Observation", ylab = "Cook's Distance", col = "blue")
+abline(h = 4 / length(cook_test_mlr), col = "red") 
+grid()
+
+# Influential observations in the Training set
+influential_train_mlr <- which(cook_train_mlr > 4 / length(cook_train_mlr))
+cat("Influential observations in Training Data (MLR Model):", influential_train_mlr, "\n")
+
+# Influential observations in the Testing set
+influential_test_mlr <- which(cook_test_mlr > 4 / length(cook_test_mlr))
+cat("Influential observations in Testing Data (MLR Model):", influential_test_mlr, "\n")
+
 #####################################
 ############# WLS model #############
 #####################################
@@ -293,3 +313,22 @@ legend("topright", legend = c("Training Residuals (WLS Model)", "Testing Residua
 grid()
 
 
+# Cook's Distance for Training Data (WLS Model)
+cook_train_wls <- cooks.distance(wls_model)
+plot(cook_train_wls, pch = 19, main = "Cook's Distance Plot (Train set - WLS)", xlab = "Observation", ylab = "Cook's Distance", col = "blue")
+abline(h = 4 / length(cook_train_wls), col = "red")  # Highlight the threshold for influential points
+grid()
+
+# Cook's Distance for Testing Data (WLS Model)
+cook_test_wls <- cooks.distance(wls_model, newdata = data.frame(test_X, test_y))
+plot(cook_test_wls, pch = 19, main = "Cook's Distance Plot (Test set WLS)", xlab = "Observation", ylab = "Cook's Distance", col = "blue")
+abline(h = 4 / length(cook_test_wls), col = "red")  # Highlight the threshold for influential points
+grid()
+
+# Influential observations in the Training Data (WLS Model)
+influential_train_wls <- which(cook_train_wls > 4 / length(cook_train_wls))
+cat("Influential observations in Training Data (WLS Model):", influential_train_wls, "\n")
+
+# Influential observations in the Testing Data (WLS Model)
+influential_test_wls <- which(cook_test_wls > 4 / length(cook_test_wls))
+cat("Influential observations in Testing Data (WLS Model):", influential_test_wls, "\n")
