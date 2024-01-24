@@ -13,7 +13,7 @@ library(dplyr)
 library(tidyr)
 library(nlme)
 
-# 1. Load the dataset and check its dimensions
+# 1. Load the dataset and check dimensions
 dataset <- read.csv('Advertising.csv')
 print(dim(dataset))
 
