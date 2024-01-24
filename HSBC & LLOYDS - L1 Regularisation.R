@@ -589,7 +589,8 @@ print(metrics_table)
 
 residual_analysis <- function(degrees, data_split, results) {
   #set up a multi-pane plot
-  par(mfrow=c(3, length(degrees)))  # Change the number of rows and columns as needed
+  #change the number of rows and columns as needed
+  par(mfrow=c(3, length(degrees))) 
   
   for (degree in degrees) {
     actual <- data_split$y_test
@@ -600,9 +601,10 @@ residual_analysis <- function(degrees, data_split, results) {
     hist(residuals, main = paste("Residuals (Degree", degree, ")", sep = " "), xlab = "Residuals")
     grid()
     
-    #plot residual vs. fitted values scatterplot for each degree
+    #plot residual vs. fitted values scatter plot for each degree
     plot(x = predicted, y = residuals, main = paste("Residuals vs. Fitted (Degree", degree, ")", sep = " "), xlab = "Fitted Values", ylab = "Residuals")
-    abline(h = 0, col = "red", lty = 2)  # Add a horizontal line at y=0
+    #adding a horizontal line at y=0
+    abline(h = 0, col = "red", lty = 2)  
     grid()
     
     #plot a Q-Q plot for each degree to check for normality
