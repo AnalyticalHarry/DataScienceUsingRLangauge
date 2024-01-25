@@ -1,7 +1,7 @@
 ## Author: Hemant Thapa
 ## Generalized Least Squares (GLS) 
 ## Programming Language: R
-## Date Pushed to GitHub: 23.01.2024
+## Date Pushed to GitHub: 25.01.2024
 ## Email: hemantthapa1998@gmail.com
 
 # Loading all libraries
