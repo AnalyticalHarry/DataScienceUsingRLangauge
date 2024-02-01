@@ -25,7 +25,7 @@ library(gridExtra)
 library(scales)
 
 #####################################
-######## Loading Data Set ###########
+######## Loading DataSet ############
 #####################################
 
 #loading the dataset and checking dimensions
