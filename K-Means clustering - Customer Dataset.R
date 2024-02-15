@@ -20,7 +20,7 @@ library(cluster)
 library(clusterCrit)
 library(fpc)
 
-# 1. load the data set and check its dimensions
+# 1. load the data set 
 dataset <- read.csv('Mall_Customers.csv')
 print(dim(dataset))
 
